@@ -1,0 +1,1517 @@
+# EFBTOUR – ULTIMATE PROFESSIONAL MASTER DEVELOPMENT PROMPT
+
+## PROJECT OVERVIEW
+
+Build a complete, professional, scalable, secure and production-ready cross-platform eFootball Tournament Management Application named:
+
+**EFBTOUR**
+
+EFBTOUR is a complete eFootball esports tournament platform designed for tournament organizers, team owners and individual players.
+
+The application must support Android and iOS using a shared codebase.
+
+The application must include:
+
+1. Owner Mode.
+2. Management Mode.
+3. Player Mode.
+4. Unlimited user accounts.
+5. Unlimited tournament teams.
+6. Solo Tournaments.
+7. BID Team Tournaments.
+8. Professional Player Auction System.
+9. 10-Player Team Management.
+10. Match Scheduling.
+11. Public Match Results.
+12. Team Scoring System.
+13. Individual Player Statistics.
+14. Team Leaderboards.
+15. Player Leaderboards.
+16. Dynamic Knockout Brackets.
+17. Quarter Finals.
+18. Semi Finals.
+19. Finals.
+20. Champion Announcement.
+21. Team Replacement System.
+22. Tournament Registration Lock.
+23. Super Admin Dashboard.
+24. Professional Settings.
+25. Apple-inspired Liquid Glass UI.
+26. Light and Dark Themes.
+27. Push Notifications.
+28. Secure Account Management.
+
+IMPORTANT:
+
+Build a fully functional application, not just a UI prototype.
+
+Every button, navigation item, form, database operation, permission, tournament calculation and management feature must work correctly.
+
+Do not silently omit any requested feature.
+
+==================================================
+# 1. TECHNOLOGY STACK
+==================================================
+
+Build EFBTOUR using modern cross-platform technology.
+
+FRONTEND:
+- Flutter.
+- Dart.
+- Material 3.
+- Custom Liquid Glass UI components.
+- Responsive mobile layouts.
+
+BACKEND:
+- Firebase Authentication.
+- Cloud Firestore.
+- Firebase Cloud Functions.
+- Firebase Storage.
+- Firebase Cloud Messaging.
+
+ARCHITECTURE:
+- Clean Architecture.
+- MVVM or an equivalent maintainable state-management architecture.
+- Repository Pattern.
+- Modular feature-based code organization.
+- Secure server-side validation.
+- Real-time database synchronization.
+- Efficient pagination.
+- Proper exception handling.
+- Offline-friendly cached viewing where appropriate.
+
+Use one shared backend and one primary codebase for Android and iOS.
+
+Do not create separate tournament databases for different platforms.
+
+Use secure environment configuration and never expose private server credentials in the application.
+
+==================================================
+# 2. ANDROID AND iOS SUPPORT
+==================================================
+
+EFBTOUR must be available on both Android and iOS.
+
+## ANDROID
+
+Provide:
+- Android APK.
+- Android App Bundle.
+- Google Play Store compatibility.
+- Android notifications.
+- Android permissions.
+- Responsive Android layouts.
+- Proper Android application icons.
+- Splash screen.
+
+## iOS
+
+Provide:
+- iPhone-compatible application.
+- iOS navigation.
+- Apple-inspired Liquid Glass design.
+- iOS notifications.
+- iOS permissions.
+- iOS application icons.
+- Launch screen.
+- Apple Sign-In support where applicable.
+- TestFlight distribution configuration.
+- App Store submission preparation.
+
+The Flutter project must be compatible with Xcode.
+
+Provide complete iOS build, signing, provisioning and publishing instructions.
+
+Building and signing the iOS application requires macOS and Xcode.
+
+Do not claim an iOS IPA has been generated unless it has actually been built.
+
+Both platforms must have the same core features, account roles, tournament data and permissions.
+
+==================================================
+# 3. APP DESIGN – APPLE-INSPIRED LIQUID GLASS
+==================================================
+
+Create a premium interface inspired by Apple's iOS Liquid Glass design language.
+
+Design characteristics:
+
+- Translucent glass surfaces.
+- Background blur.
+- Floating navigation bars.
+- Frosted glass cards.
+- Rounded glass panels.
+- Subtle reflections.
+- Smooth animations.
+- Modern typography.
+- Premium icons.
+- Soft shadows.
+- Responsive layouts.
+- Professional esports appearance.
+
+The design must feel modern, clean and premium.
+
+## DARK MODE
+
+- Deep black background.
+- Dark translucent glass cards.
+- Neon green accents.
+- White typography.
+- Premium esports atmosphere.
+
+## LIGHT MODE
+
+- White background.
+- Soft grey surfaces.
+- Translucent white cards.
+- Dark typography.
+- Green accent colors.
+- Clean iOS-inspired appearance.
+
+## THEME SETTINGS
+
+Provide:
+- Light Mode.
+- Dark Mode.
+- System Default.
+
+Users can change themes anytime.
+
+Save their preference to their account.
+
+Theme changes must apply throughout the entire application without requiring logout.
+
+The design must adapt appropriately to Android and iOS instead of copying platform-specific UI elements incorrectly.
+
+==================================================
+# 4. ACCOUNT REGISTRATION AND AUTHENTICATION
+==================================================
+
+Every user must have a registered EFBTOUR account to access account-specific features.
+
+Registration fields:
+
+- Full Name.
+- Username.
+- Email Address.
+- Phone Number.
+- Password.
+- Profile Picture.
+- eFootball Username.
+- eFootball User ID.
+
+Features:
+
+- Account Registration.
+- Login.
+- Logout.
+- Forgot Password.
+- Password Reset.
+- Email Verification.
+- Phone Verification where supported.
+- Profile Editing.
+- Username Validation.
+- Secure Authentication.
+- Account Deletion.
+
+Every account must have a unique user ID.
+
+Allow public visitors to view public tournament information without registration.
+
+==================================================
+# 5. THREE PERMANENT USER MODES
+==================================================
+
+EFBTOUR must have exactly three primary user roles:
+
+1. OWNER MODE.
+2. MANAGEMENT MODE.
+3. PLAYER MODE.
+
+Each account must have one primary role.
+
+During account setup, display three professional role-selection cards.
+
+### OWNER MODE
+
+For users who want to own and manage their own teams.
+
+### MANAGEMENT MODE
+
+For authorized tournament management personnel.
+
+### PLAYER MODE
+
+For users who participate as individual eFootball players.
+
+## ROLE LOCK SYSTEM
+
+- One account can select only one primary role.
+- Once selected, the role is permanently locked to that account.
+- No role-switching option.
+- No role-switching button in Settings.
+- Logout cannot reset the role.
+- Reinstalling the app cannot reset the role.
+- Changing devices cannot reset the role.
+
+Management Mode must be provisioned or approved by Super Admin to prevent unauthorized administrative access.
+
+Owner and Player registrations can follow the public registration process.
+
+## ACCOUNT DELETION RULE
+
+Role locking applies to an account, not permanently to a person.
+
+If an account is permanently deleted, the user can register a new account and select a new role.
+
+Historical tournament records must be preserved appropriately.
+
+Deletion must follow a secure account-deletion workflow.
+
+==================================================
+# 6. UNLIMITED USERS AND TEAMS
+==================================================
+
+There must be no arbitrary hardcoded application-level numerical limits for:
+
+- Owner Accounts.
+- Management Accounts.
+- Player Accounts.
+- Tournament Teams.
+- Tournament Participants.
+- Tournament Registrations.
+
+Management can create as many teams as the tournament requires.
+
+Examples:
+
+- 4 Teams.
+- 8 Teams.
+- 16 Teams.
+- 24 Teams.
+- 32 Teams.
+- 50 Teams.
+- 100 Teams.
+- 200 Teams.
+- Any larger supported number.
+
+Do not hardcode a maximum team count.
+
+Use:
+- Scalable Firestore collections.
+- Database pagination.
+- Indexed queries.
+- Efficient data loading.
+- Batched processing.
+- Backend validation.
+
+Respect actual Firebase quotas, storage limits and performance constraints.
+
+The BID Team Tournament squad requirement remains exactly 10 active players per team.
+
+==================================================
+# 7. OWNER MODE – TEAM OWNER DASHBOARD
+==================================================
+
+Create a separate professional Owner Dashboard.
+
+Dashboard features:
+
+- My Team.
+- Create Team Request.
+- Team Name.
+- Team Logo.
+- Team Description.
+- Team Information.
+- My Squad.
+- Player Auction.
+- Select Players.
+- Bid History.
+- Team Budget.
+- Purchased Players.
+- Match Schedule.
+- Match Results.
+- Team Statistics.
+- Team Leaderboard.
+- Team Settings.
+- Notifications.
+
+## TEAM OWNER RULES
+
+- Owners can manage only their own teams.
+- Owners can select players through the auction.
+- Owners can manage their 10-player squad.
+- Owners cannot manage other teams.
+- Owners cannot modify official match scores.
+- Owners cannot modify tournament brackets.
+- Owners cannot change official tournament points.
+
+A team must have one designated owner for the applicable tournament registration.
+
+==================================================
+# 8. MANAGEMENT MODE – COMPLETE TOURNAMENT CONTROL
+==================================================
+
+Create a separate Management Dashboard.
+
+Management must have its own professional interface, navigation, permissions and activity history.
+
+## MANAGEMENT FEATURES
+
+- Tournament Overview.
+- Create Tournament.
+- Edit Tournament.
+- Create Unlimited Teams.
+- Add Team.
+- Remove Team.
+- Replace Team.
+- Assign Team Owner.
+- Change Team Owner.
+- Manage Team Registration.
+- Manage Player Registration.
+- Manage Auctions.
+- Manage Tournament Deadlines.
+- Manage Match Schedules.
+- Manage Match Times.
+- Verify Match Results.
+- Correct Official Scores with Audit History.
+- Generate Brackets.
+- Arrange Tournament Seeding.
+- Manage Round of 16.
+- Manage Quarter Finals.
+- Manage Semi Finals.
+- Manage Finals.
+- Manage Leaderboards.
+- Announce Champions.
+- View Tournament History.
+
+## MULTIPLE MANAGEMENT ACCOUNTS
+
+Support multiple Management Accounts without an arbitrary fixed numerical limit.
+
+Super Admin can:
+
+- Create Management Accounts.
+- Approve Management Accounts.
+- Suspend Management Accounts.
+- Remove Management Access.
+- Assign Permissions.
+- Revoke Permissions.
+- Review Management Activity.
+
+Support granular permissions:
+
+- Tournament Manager.
+- Team Manager.
+- Match Manager.
+- Score Verification Manager.
+- Auction Manager.
+- Bracket Manager.
+
+Management accounts must only access the operations assigned to them.
+
+## SUPER ADMIN VS MANAGEMENT
+
+Super Admin:
+- Full application administration.
+- Management account authorization.
+- Global security settings.
+- Complete administrative oversight.
+
+Management:
+- Tournament-level operations.
+- Assigned team, match, auction and bracket responsibilities.
+
+Never grant Super Admin access through ordinary role selection.
+
+==================================================
+# 9. PLAYER MODE – PLAYER DASHBOARD
+==================================================
+
+Create a dedicated Player Dashboard.
+
+Features:
+
+- My Profile.
+- My Player Status.
+- My Auction Status.
+- My Team.
+- My Team Owner.
+- My Match Schedule.
+- My Match Results.
+- My Individual Statistics.
+- My Performance.
+- My Tournament History.
+- Notifications.
+
+Player statuses:
+
+- Registered.
+- Available for Auction.
+- Auction Pending.
+- Selected.
+- Not Selected.
+- Active.
+- Suspended.
+- Tournament Completed.
+
+Players must have registered EFBTOUR accounts.
+
+Players can see their own private player information.
+
+Players cannot:
+
+- Create or manage teams.
+- Place auction bids.
+- Select other players.
+- Add players to teams.
+- Modify official scores.
+- Modify tournament points.
+- Modify brackets.
+- Access unauthorized private team information.
+
+==================================================
+# 10. TOURNAMENT TYPES
+==================================================
+
+Support two main tournament types.
+
+## A. SOLO TOURNAMENT
+
+Features:
+
+- Individual player registration.
+- Individual player participation.
+- Match scheduling.
+- Match deadlines.
+- Individual results.
+- Knockout progression.
+- Individual statistics.
+- Player leaderboard.
+- Champion announcement.
+
+## B. BID TEAM TOURNAMENT
+
+Features:
+
+- Unlimited participating teams.
+- Exactly 10 active players per team.
+- Player auction.
+- Team budgets.
+- Player selection.
+- Team vs Team encounters.
+- 10 individual matches per team encounter.
+- Aggregate team scoring.
+- Team knockout progression.
+- Individual player statistics.
+- Team leaderboard.
+
+Tournament creators must be able to choose the tournament type when creating a tournament.
+
+==================================================
+# 11. PROFESSIONAL BID AUCTION SYSTEM
+==================================================
+
+All auction participants must have registered EFBTOUR accounts.
+
+Only authorized Team Owners can bid.
+
+## AUCTION INTERFACE
+
+Display:
+
+- Player Photo.
+- Player Name.
+- eFootball Username.
+- eFootball User ID.
+- Player Statistics.
+- Starting Bid.
+- Current Highest Bid.
+- Highest Bidder.
+- Team Budget.
+- Countdown.
+- Bid History.
+- Auction Status.
+
+## AUCTION RULES
+
+1. Only authorized Team Owners can place bids.
+2. Only eligible registered players can enter the auction.
+3. Highest valid bid wins.
+4. Purchased players are automatically assigned to the winning team.
+5. Deduct the winning bid from the team's virtual budget.
+6. One player cannot be purchased by two teams in the same tournament.
+7. A team cannot exceed 10 active player positions.
+8. Management controls auction opening and closing.
+9. Maintain complete auction history.
+10. Prevent duplicate and invalid bids.
+11. Prevent spending beyond available virtual budget.
+12. Handle simultaneous bids using backend transactions.
+
+Use tournament-specific virtual auction credits.
+
+Do not introduce real-money payment functionality unless separately authorized and properly implemented.
+
+==================================================
+# 12. TEAM VS TEAM MATCH SCORING SYSTEM
+==================================================
+
+Each BID Tournament team has exactly 10 active players.
+
+When Team A plays Team B:
+
+A1 vs B1.
+A2 vs B2.
+A3 vs B3.
+A4 vs B4.
+A5 vs B5.
+A6 vs B6.
+A7 vs B7.
+A8 vs B8.
+A9 vs B9.
+A10 vs B10.
+
+One team encounter contains exactly 10 individual matches.
+
+## POINT SYSTEM
+
+- Win = 1 point.
+- Draw = 0.5 points for each team.
+- Loss = 0 points.
+
+Example:
+
+Team A:
+- 6 Wins.
+- 1 Draw.
+- 3 Losses.
+
+Team B:
+- 3 Wins.
+- 1 Draw.
+- 6 Losses.
+
+Team A = 6.5 points.
+
+Team B = 3.5 points.
+
+Automatically calculate aggregate team points after verified individual match results.
+
+Do not count pending or unverified scores.
+
+Individual player statistics must remain separate from team aggregate points.
+
+==================================================
+# 13. TOURNAMENT REGISTRATION LOCK SYSTEM
+==================================================
+
+Before the tournament officially starts:
+
+Management can:
+
+- Add unlimited teams.
+- Remove teams.
+- Replace teams.
+- Assign owners.
+- Change team information.
+- Arrange participants.
+- Set tournament seeding.
+- Generate or regenerate brackets.
+
+When the tournament officially starts:
+
+- Automatically lock new team registration.
+- Do not allow additional tournament slots.
+- Do not allow ordinary team additions.
+- Preserve existing bracket positions.
+- Preserve historical match information.
+
+## POST-START TEAM REPLACEMENT
+
+Management must still be able to replace an existing team after the tournament starts.
+
+Rules:
+
+1. Select the team to remove.
+2. Select an eligible replacement team.
+3. Place the replacement in the existing team's slot.
+4. Do not create an additional tournament slot.
+5. Require a mandatory replacement reason.
+6. Record previous team ID.
+7. Record replacement team ID.
+8. Record management user ID.
+9. Record timestamp.
+10. Record replacement reason.
+11. Notify affected parties.
+
+If the removed team has already played matches:
+
+- Never transfer its old scores to the replacement.
+- Preserve verified historical results.
+- Require an explicit management decision for affected matches.
+- Preserve unrelated match records.
+- Recalculate only affected future matches.
+- Keep a complete audit history.
+- Prevent duplicate or invalid bracket progression.
+
+Super Admin must be able to review sensitive replacements.
+
+==================================================
+# 14. DYNAMIC KNOCKOUT TOURNAMENT BRACKET
+==================================================
+
+THIS IS A CRITICAL FEATURE.
+
+Use the tournament bracket reference image supplied by the user as the visual blueprint.
+
+Recreate its symmetrical left-right structure.
+
+Do not replace the requested bracket with a generic vertical list.
+
+## BRACKET DESIGN
+
+The bracket must contain:
+
+- Opening Round.
+- Quarter Final.
+- Semi Final.
+- Final.
+- Champion.
+
+For a 16-team tournament:
+
+ROUND OF 16:
+8 Matches.
+
+QUARTER FINAL:
+4 Matches.
+
+SEMI FINAL:
+2 Matches.
+
+FINAL:
+1 Match.
+
+CHAMPION:
+1 Winner.
+
+## VISUAL LAYOUT
+
+- Teams enter from both outer sides.
+- Opening matches appear at the left and right edges.
+- Winners connect to the next round.
+- Quarter Finals move closer to the center.
+- Semi Finals move closer to the center.
+- Final appears in the middle.
+- Champion appears prominently after the final.
+
+Use:
+- Horizontal connectors.
+- Vertical round connectors.
+- Team Logos.
+- Team Names.
+- Match Scores.
+- Match Status.
+- Winner Highlighting.
+- Round Titles.
+- Center Final Card.
+- Champion Card.
+
+The overall layout must closely match the uploaded reference image.
+
+## DYNAMIC PARTICIPANT SUPPORT
+
+Support:
+
+- 4 Participants.
+- 8 Participants.
+- 16 Participants.
+- 32 Participants.
+- 64 Participants.
+- 128 Participants.
+- Any larger supported participant count.
+
+Calculate bracket size automatically using the next suitable power of two.
+
+Examples:
+
+10 participants:
+16-slot bracket with 6 BYEs.
+
+24 participants:
+32-slot bracket with 8 BYEs.
+
+50 participants:
+64-slot bracket with 14 BYEs.
+
+BYE RULES:
+
+- Automatically advance eligible participants.
+- Never create fake matches for BYEs.
+- Never create fake scores.
+- Keep the bracket structurally correct.
+
+## BRACKET INTERACTION
+
+Users can:
+
+- View all tournament rounds.
+- View match details.
+- View public scores.
+- View team profiles.
+- View participant information.
+- Follow tournament progress.
+
+Management can:
+
+- Arrange seeding.
+- Randomize draws.
+- Assign first-round matchups.
+- Change future match schedules.
+- Verify results.
+- Correct results with audit logs.
+- Manage withdrawals.
+- Manage disqualifications.
+- Manage BYEs.
+
+## AUTOMATIC BRACKET PROGRESSION
+
+Only verified match winners advance.
+
+Each winner must advance to exactly one correct next-round position.
+
+Prevent:
+
+- Duplicate participants.
+- Duplicate matches.
+- Invalid progression.
+- Pending matches advancing.
+- Incorrect bracket positions.
+- Reprocessing the same completed match.
+
+Tournament completion requires a verified final result.
+
+==================================================
+# 15. TEAM KNOCKOUT RULES
+==================================================
+
+In BID Team Tournaments, the knockout bracket represents Team vs Team encounters.
+
+Each encounter contains 10 individual player matches.
+
+The team with the higher aggregate points advances.
+
+If both teams have equal points, use the configured tournament tie-breaker.
+
+Supported tie-breakers:
+
+- Extra Decider Match.
+- Goal Difference.
+- Management-approved Replay.
+
+Never randomly choose a winner.
+
+Only verified team results can advance.
+
+==================================================
+# 16. SOLO KNOCKOUT RULES
+==================================================
+
+In Solo Tournaments:
+
+- Every bracket match represents one player versus another.
+- Winner advances.
+- Loser is eliminated.
+- BYEs are handled automatically.
+- Use the same symmetrical bracket design.
+
+==================================================
+# 17. MATCH SCHEDULING AND MANAGEMENT
+==================================================
+
+Management controls:
+
+- Match Creation.
+- Match Date.
+- Match Time.
+- Match Deadline.
+- Registration Deadline.
+- Result Submission Deadline.
+- Player Matchups.
+- Team Matchups.
+- Match Status.
+- Score Verification.
+- Approved Score Correction.
+
+Match statuses:
+
+- Upcoming.
+- Scheduled.
+- Live.
+- Pending Result.
+- Completed.
+- Cancelled.
+
+Display countdown timers.
+
+Use the tournament's configured local timezone.
+
+For Bangladesh tournaments, support Asia/Dhaka timezone.
+
+Send reminders before scheduled matches.
+
+==================================================
+# 18. PUBLIC MATCH RESULT SYSTEM
+==================================================
+
+THIS IS A NON-NEGOTIABLE REQUIREMENT.
+
+ALL OFFICIAL TOURNAMENT MATCH RESULTS MUST BE PUBLIC.
+
+Anyone must be able to view match results without registration or login.
+
+Do not restrict public match result viewing to:
+
+- Team Owners.
+- Management.
+- Registered Players.
+- Participating Teams.
+
+## PUBLIC MATCH CENTER
+
+Display:
+
+- Tournament Name.
+- Tournament Type.
+- Team A Name.
+- Team B Name.
+- Team Logos.
+- Match Date.
+- Match Time.
+- Tournament Round.
+- Individual Player Matchups.
+- Individual Match Scores.
+- Individual Match Winners.
+- Aggregate Team Points.
+- Final Match Result.
+- Verified Status.
+
+Support public result viewing for:
+
+- Solo Tournaments.
+- BID Team Tournaments.
+- Opening Rounds.
+- Round of 16.
+- Quarter Finals.
+- Semi Finals.
+- Finals.
+
+## PUBLIC MATCH ACCESS
+
+Every visitor can view:
+
+- Upcoming Matches.
+- Live Matches.
+- Completed Matches.
+- Verified Results.
+- Tournament Brackets.
+- Team Standings.
+- Player Standings.
+- Champion Information.
+
+No login is required for public information.
+
+## PUBLIC AND PRIVATE DATA SEPARATION
+
+PUBLIC:
+- Verified Match Results.
+- Match Schedules.
+- Tournament Brackets.
+- Team Points.
+- Public Standings.
+- Team Profiles.
+- Public Player Statistics.
+- Tournament History.
+- Champion Information.
+
+PRIVATE:
+- Passwords.
+- Email Addresses.
+- Phone Numbers.
+- Login Activity.
+- Private Account Settings.
+- Internal Management Discussions.
+- Sensitive Auction Security Data.
+
+Only authorized users can submit or modify official scores.
+
+Only authorized Management can verify or correct scores.
+
+Everyone can view verified final results.
+
+IMPORTANT:
+
+Do not expose private user data through public database queries.
+
+Use separate public data projections or properly secured public read access.
+
+==================================================
+# 19. TEAM LEADERBOARD
+==================================================
+
+Create a separate Team Leaderboard.
+
+Columns:
+
+- Position.
+- Team Logo.
+- Team Name.
+- Owner Name.
+- Matches Played.
+- Wins.
+- Draws.
+- Losses.
+- Total Points.
+
+Every team must have a separate detail page.
+
+Leaderboard updates automatically after verified results.
+
+==================================================
+# 20. PLAYER LEADERBOARD
+==================================================
+
+Create a separate Individual Player Leaderboard.
+
+Columns:
+
+- Position.
+- Player Photo.
+- Player Name.
+- Team Name.
+- Matches Played.
+- Wins.
+- Draws.
+- Losses.
+- Individual Points.
+
+Individual statistics must be calculated independently of team aggregate points.
+
+==================================================
+# 21. INDIVIDUAL TEAM SQUAD TABLES
+==================================================
+
+Each team must have a separate squad page.
+
+Team Information:
+
+- Team Name.
+- Team Logo.
+- Owner Name.
+- Total Points.
+- Matches Played.
+- Wins.
+- Draws.
+- Losses.
+
+Player Table:
+
+- Player Name.
+- Profile Picture.
+- eFootball ID.
+- Matches Played.
+- Wins.
+- Draws.
+- Losses.
+- Individual Points.
+- Player Status.
+
+Display all 10 active players in BID Team Tournaments.
+
+Protect private information while allowing public display of permitted player statistics.
+
+==================================================
+# 22. SUPER ADMIN DASHBOARD
+==================================================
+
+Create a complete Super Admin Dashboard.
+
+Features:
+
+- User Management.
+- Owner Management.
+- Management Account Management.
+- Player Management.
+- Tournament Management.
+- Team Management.
+- Auction Management.
+- Match Management.
+- Bracket Management.
+- Result Verification.
+- Score Correction.
+- Leaderboard Management.
+- Notifications.
+- Account Suspension.
+- Reports.
+- Audit Logs.
+- Global Settings.
+
+Only securely authorized Super Admin accounts can access these functions.
+
+Never allow ordinary users to grant themselves Super Admin access.
+
+==================================================
+# 23. NOTIFICATION SYSTEM
+==================================================
+
+Use Firebase Cloud Messaging.
+
+PLAYER NOTIFICATIONS:
+
+- Auction Availability.
+- Player Selection.
+- Team Assignment.
+- Match Schedule.
+- Match Reminder.
+- Match Results.
+- Tournament Updates.
+
+OWNER NOTIFICATIONS:
+
+- Auction Alerts.
+- Bid Updates.
+- Auction Results.
+- Match Reminders.
+- Team Updates.
+- Replacement Notices.
+
+MANAGEMENT NOTIFICATIONS:
+
+- New Registrations.
+- Team Creation Requests.
+- Match Result Submissions.
+- Tournament Changes.
+- Administrative Alerts.
+
+PUBLIC USERS:
+
+Allow visitors to receive public tournament announcements if they opt into notifications and the platform supports their subscription method.
+
+==================================================
+# 24. PROFESSIONAL SETTINGS
+==================================================
+
+Create a premium Liquid Glass Settings page.
+
+ACCOUNT:
+- Edit Profile.
+- Change Username.
+- Change Profile Picture.
+- Change Password.
+- Email Verification.
+- Phone Verification.
+
+APPEARANCE:
+- Light Mode.
+- Dark Mode.
+- System Default.
+- English Language.
+- Bengali Language.
+- Animation Preferences.
+- Sound Effects.
+
+PRIVACY AND SECURITY:
+- Privacy Settings.
+- Account Visibility.
+- Login Activity.
+- Active Sessions.
+- Two-Step Verification.
+- Blocked Accounts.
+- Account Deactivation.
+- Permanent Account Deletion.
+
+NOTIFICATIONS:
+- Match Alerts.
+- Auction Alerts.
+- Team Alerts.
+- Tournament Announcements.
+- Push Notification Preferences.
+
+SUPPORT:
+- Help Center.
+- Contact Admin.
+- Report a Problem.
+- FAQ.
+- Terms and Conditions.
+- Privacy Policy.
+- About EFBTOUR.
+- App Version.
+
+Theme selection must always remain changeable.
+
+Role switching must remain unavailable while the account exists.
+
+==================================================
+# 25. DATABASE ARCHITECTURE
+==================================================
+
+Create a scalable Firebase database structure.
+
+Collections:
+
+users/
+teams/
+tournaments/
+registrations/
+auctions/
+auctionBids/
+matches/
+playerMatches/
+results/
+brackets/
+bracketRounds/
+managementPermissions/
+teamReplacements/
+notifications/
+settings/
+auditLogs/
+
+Suggested USER fields:
+
+- userId.
+- fullName.
+- username.
+- email.
+- role.
+- roleLocked.
+- roleSelectedAt.
+- profilePicture.
+- efootballId.
+- accountStatus.
+- createdAt.
+
+Suggested TEAM fields:
+
+- teamId.
+- teamName.
+- teamLogo.
+- ownerId.
+- tournamentId.
+- squadPlayerIds.
+- budget.
+- totalPoints.
+- status.
+- createdAt.
+
+Suggested TOURNAMENT fields:
+
+- tournamentId.
+- title.
+- type.
+- status.
+- registrationDeadline.
+- startTime.
+- participantCount.
+- createdAt.
+
+Suggested BRACKET fields:
+
+- bracketId.
+- tournamentId.
+- roundNumber.
+- roundName.
+- matchId.
+- participantAId.
+- participantBId.
+- winnerId.
+- nextMatchId.
+- nextSlot.
+- matchStatus.
+
+Suggested REPLACEMENT fields:
+
+- replacementId.
+- tournamentId.
+- previousTeamId.
+- replacementTeamId.
+- managerId.
+- reason.
+- timestamp.
+- affectedMatchIds.
+- approvalStatus.
+
+Use proper document relationships, indexes, timestamps and validation.
+
+Do not load every user or team into memory simultaneously.
+
+Use pagination and optimized database queries.
+
+==================================================
+# 26. SECURITY AND DATA INTEGRITY
+==================================================
+
+Implement:
+
+- Firebase Authentication.
+- Strict Firestore Security Rules.
+- Role-Based Access Control.
+- Management Permissions.
+- Super Admin Permissions.
+- Team Ownership Verification.
+- Player Uniqueness.
+- Secure Auction Transactions.
+- Public Result Read Access.
+- Private Data Protection.
+- Match Result Verification.
+- Bracket Progression Validation.
+- Replacement Audit Logs.
+- Rate Limiting.
+- Secure Account Deletion.
+- Data Integrity Validation.
+
+Never rely only on frontend restrictions.
+
+All official tournament operations must be verified through trusted backend functions.
+
+Prevent:
+
+- Unauthorized score editing.
+- Duplicate auction purchases.
+- Invalid player assignments.
+- Unauthorized team modifications.
+- Invalid bracket progression.
+- Duplicate tournament results.
+- Unauthorized management access.
+
+==================================================
+# 27. TESTING AND QUALITY ASSURANCE
+==================================================
+
+Test the complete application before declaring it finished.
+
+TEST 1:
+Register an Owner account and verify Owner Mode restrictions.
+
+TEST 2:
+Register a Player account and verify Player Mode restrictions.
+
+TEST 3:
+Provision a Management account and verify its permissions.
+
+TEST 4:
+Verify role locking after logout, reinstall and device change.
+
+TEST 5:
+Delete an account and register a new account with a fresh role selection.
+
+TEST 6:
+Create multiple Management accounts.
+
+TEST 7:
+Create a large number of teams without arbitrary application-level hardcoded limits.
+
+TEST 8:
+Assign different team owners.
+
+TEST 9:
+Complete a 10-player auction.
+
+TEST 10:
+Verify that a BID team cannot exceed 10 active players.
+
+TEST 11:
+Complete a 10-match Team vs Team encounter.
+
+TEST 12:
+Verify team points.
+
+TEST 13:
+Generate a 16-team knockout bracket.
+
+TEST 14:
+Generate 32-team and 50-team brackets.
+
+TEST 15:
+Verify BYE progression.
+
+TEST 16:
+Verify Quarter Final progression.
+
+TEST 17:
+Verify Semi Final progression.
+
+TEST 18:
+Verify Final and Champion announcement.
+
+TEST 19:
+Test Solo Tournament progression.
+
+TEST 20:
+Test Team Replacement before and after matches.
+
+TEST 21:
+Verify historical results are never silently transferred.
+
+TEST 22:
+Verify that visitors without accounts can view public match results.
+
+TEST 23:
+Verify that visitors cannot edit official scores.
+
+TEST 24:
+Verify private user information remains protected.
+
+TEST 25:
+Test Management Permissions.
+
+TEST 26:
+Test Light Mode and Dark Mode.
+
+TEST 27:
+Test Android and iOS responsive layouts.
+
+TEST 28:
+Test push notifications.
+
+TEST 29:
+Test simultaneous auction bids.
+
+TEST 30:
+Test duplicate matches, invalid results and unauthorized requests.
+
+Do not claim a test has passed unless it has actually been executed successfully.
+
+==================================================
+# 28. FINAL PROJECT DELIVERABLES
+==================================================
+
+Provide:
+
+1. Complete Flutter Project.
+2. Complete Dart Source Code.
+3. Android Build Configuration.
+4. iOS Xcode Project Configuration.
+5. Firebase Authentication.
+6. Firestore Database Structure.
+7. Firebase Cloud Functions.
+8. Firestore Security Rules.
+9. Owner Dashboard.
+10. Management Dashboard.
+11. Player Dashboard.
+12. Super Admin Dashboard.
+13. Unlimited Team Management.
+14. Player Auction System.
+15. Solo Tournament System.
+16. BID Team Tournament System.
+17. 10-Player Squad Management.
+18. Match Scoring System.
+19. Public Match Center.
+20. Team Leaderboard.
+21. Player Leaderboard.
+22. Dynamic Knockout Bracket.
+23. Quarter Final System.
+24. Semi Final System.
+25. Final System.
+26. Champion Announcement.
+27. Team Replacement System.
+28. Tournament Registration Lock.
+29. Light and Dark Themes.
+30. Professional Settings.
+31. Notification System.
+32. Secure Account Deletion.
+33. Android APK Build Instructions.
+34. Google Play Store Publishing Instructions.
+35. iOS Xcode Build Instructions.
+36. TestFlight Instructions.
+37. Apple App Store Publishing Instructions.
+
+==================================================
+# 29. DEVELOPMENT EXECUTION PLAN
+==================================================
+
+Build the application in these integrated phases.
+
+PHASE 1:
+Project Setup, Flutter Architecture, Firebase Configuration and Authentication.
+
+PHASE 2:
+Three User Roles, Role Locking and Account Management.
+
+PHASE 3:
+Owner Dashboard, Management Dashboard, Player Dashboard and Super Admin.
+
+PHASE 4:
+Unlimited Team Management and Registration Lock.
+
+PHASE 5:
+Player Auction and 10-Player Squad System.
+
+PHASE 6:
+Solo and BID Tournament Systems.
+
+PHASE 7:
+Match Scheduling, Match Results and Scoring.
+
+PHASE 8:
+Dynamic Knockout Bracket, BYEs, Quarter Finals, Semi Finals and Finals.
+
+PHASE 9:
+Public Match Center, Team Leaderboard and Player Leaderboard.
+
+PHASE 10:
+Team Replacement, Notifications, Audit Logs and Security.
+
+PHASE 11:
+Liquid Glass UI, Light Mode, Dark Mode and Settings.
+
+PHASE 12:
+Android Testing, iOS Testing, Performance Optimization and Release Builds.
+
+Maintain a single integrated application throughout all development phases.
+
+Do not leave unfinished placeholder screens or fake buttons.
+
+Do not remove any previously requested feature.
+
+==================================================
+# 30. FINAL NON-NEGOTIABLE REQUIREMENTS
+==================================================
+
+1. Official Application Name: EFBTOUR.
+2. Android and iOS support.
+3. Flutter cross-platform architecture.
+4. One shared Firebase backend.
+5. Three separate roles: OWNER, MANAGEMENT and PLAYER.
+6. One permanent role per account.
+7. Account deletion permits fresh registration and role selection.
+8. Unlimited user accounts without arbitrary hardcoded limits.
+9. Unlimited Management accounts.
+10. Unlimited tournament teams.
+11. Each BID team has exactly 10 active players.
+12. Only team owners manage their own squads.
+13. Only authorized Management controls tournaments.
+14. Tournament registration locks after the tournament starts.
+15. Management can replace an existing team without creating an additional slot.
+16. Verified historical results must never be silently transferred.
+17. Each team encounter has 10 individual matches.
+18. Separate Team and Player Leaderboards.
+19. Public Match Results accessible to everyone, including visitors without accounts.
+20. Only authorized users can submit, verify or modify official results.
+21. Dynamic Knockout Bracket matching the supplied reference image.
+22. Automatic progression after verified results.
+23. Quarter Final, Semi Final and Final systems.
+24. Automatic Champion announcement.
+25. Private account information remains protected.
+26. Light and Dark Liquid Glass themes.
+27. Professional Settings.
+28. Complete Audit History.
+29. Secure Firebase backend.
+30. Production-ready Android and iOS build configurations.
+
+FINAL OBJECTIVE:
+
+Create EFBTOUR as a premium, secure, scalable and fully functional cross-platform eFootball Tournament Management Platform.
+
+It must look professional, work reliably and support tournament organizers, team owners, players and public visitors.
+
+Build the real application, not merely a design demonstration.

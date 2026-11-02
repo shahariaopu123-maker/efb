@@ -1,0 +1,7 @@
+{
+  "name": "EFBTOUR",
+  "description": "Cross-platform eFootball Esports Tournament Management Platform featuring Owner, Management, and Player modes, live bid auctions, 10-player squads, symmetrical dynamic knockout brackets, and public match results.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
